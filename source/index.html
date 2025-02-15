@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
@@ -175,47 +176,47 @@
       </section>
       <section class="catalog">
         <div class="catalog__filter-wrapper">
+          <span class="catalog__filter-label label">Каталог</span>
+          <h2 class="catalog__filter-title">Каталог кофейных напитков</h2>
           <form class="catalog__filter-form" classaction="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog__filter-group catalog__filter-group-price">
-              <legend class="catalog__filter-group-title"></legend>
+              <legend class="catalog__filter-group-title">Цена</legend>
+              <div class="catalog__filter-price-slider"></div>
               <div class="catalog__filter-price-wrapper">
                 <label class="visually-hidden" for="min-price">Мин. цена</label>
-                <input class="catalog__filter-price-input catalog__filter-price_input-min" id="min-price" type="text" placeholder="0" name="min-price">
+                <input class="catalog__filter-price-input catalog__filter-price-input-min" id="min-price" type="text" placeholder="0" name="min-price">
                 <label class="visually-hidden" for="max-price">Макс. цена</label>
-                <input class="catalog__filter-price-input catalog__filter-price_input-max" id="max-price" type="text" placeholder="900" name="min-price" value="900">
-              </div>
-              <div class="catalog__filter-price-slider">
-
+                <input class="catalog__filter-price-input catalog__filter-price-input-max" id="max-price" type="text" placeholder="900" name="min-price" value="900">
               </div>
             </fieldset>
             <fieldset class="catalog__filter-group catalog__filter-group-availability">
               <legend class="catalog__filter-group-title">Наличие молока</legend>
-              <ul class="catalog_filter-item">
+              <ul class="catalog__filter-item">
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
-                    <input class="catalog__filter-input visually-hidden" type="radio" name="Неважно">
-                    <span class="catalog__filter-mark"></span>
+                    <input class="catalog__filter-input visually-hidden" type="radio" name="milk">
+                    <span class="catalog__filter-mark catalog__filter-mark-milk"></span>
                     <span class="catalog__filter-label">Неважно</span>
                   </label>
                 </li>
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
-                    <input class="catalog__filter-input visually-hidden" type="radio" name="Только животное">
-                    <span class="catalog__filter-mark"></span>
+                    <input class="catalog__filter-input visually-hidden" type="radio" name="milk">
+                    <span class="catalog__filter-mark catalog__filter-mark-milk"></span>
                     <span class="catalog__filter-label">Только животное</span>
                   </label>
                 </li>
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
-                    <input class="catalog__filter-input visually-hidden" type="radio" name="Только растительное">
-                    <span class="catalog__filter-mark"></span>
+                    <input class="catalog__filter-input visually-hidden" type="radio" name="milk">
+                    <span class="catalog__filter-mark catalog__filter-mark-milk"></span>
                     <span class="catalog__filter-label">Только растительное</span>
                   </label>
                 </li>
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
-                    <input class="catalog__filter-input visually-hidden" type="radio" name="Только животное">
-                    <span class="catalog__filter-mark"></span>
+                    <input class="catalog__filter-input visually-hidden" type="radio" name="milk">
+                    <span class="catalog__filter-mark catalog__filter-mark-milk"></span>
                     <span class="catalog__filter-label">Без молока</span>
                   </label>
                 </li>
@@ -223,52 +224,58 @@
             </fieldset>
             <fieldset class="catalog__filter-group catalog__filter-group-country">
               <legend class="catalog__filter-group-title">Страна произрастания</legend>
-              <ul class="catalog_filter-item">
+              <ul class="catalog__filter-item">
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
                     <input class="catalog__filter-input visually-hidden" type="checkbox" name="Бразилия">
-                    <span class="catalog__filter-mark"></span>
+                    <span class="catalog__filter-mark catalog__filter-mark-country"></span>
                     <span class="catalog__filter-label">Бразилия</span>
                   </label>
                 </li>
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
                     <input class="catalog__filter-input visually-hidden" type="checkbox" name="Эфиопия">
-                    <span class="catalog__filter-mark"></span>
+                    <span class="catalog__filter-mark catalog__filter-mark-country"></span>
                     <span class="catalog__filter-label">Эфиопия</span>
                   </label>
                 </li>
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
                     <input class="catalog__filter-input visually-hidden" type="checkbox" name="Колумбия">
-                    <span class="catalog__filter-mark"></span>
+                    <span class="catalog__filter-mark catalog__filter-mark-country"></span>
                     <span class="catalog__filter-label">Колумбия</span>
                   </label>
                 </li>
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
                     <input class="catalog__filter-input visually-hidden" type="checkbox" name="Коста-Рика">
-                    <span class="catalog__filter-mark"></span>
+                    <span class="catalog__filter-mark catalog__filter-mark-country"></span>
                     <span class="catalog__filter-label">Коста-Рика</span>
                   </label>
                 </li>
                 <li class="catalog__filter-list">
                   <label class="catalog__filter-control">
                     <input class="catalog__filter-input visually-hidden" type="checkbox" name="Перу">
-                    <span class="catalog__filter-mark"></span>
+                    <span class="catalog__filter-mark catalog__filter-mark-country"></span>
                     <span class="catalog__filter-label">Перу</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
+            <div class="catalog__filter-submit-wrapper">
+              <button class="catalog__filter-button-submit button">Применить</button>
+              <button class="catalog__filter-button-reset button">Сбросить</button>
+            </div>
           </form>
         </div>
         <div class="catalog__container">
           <div class="catalog__sorting-wrapper">
             <span class="catalog__sorting-label">
+              <span class="catalog__sorting-text">Сортировка:</span>
               <select class="catalog__sorting-control">
                 <option class="catalog__sorting-option" value="default">по умолчанию</option>
               </select>
+              <span class="catalog__sorting-option-arrow"></span>
             </span>
           </div>
           <div class="catalog__product-wrapper">
@@ -396,5 +403,6 @@
         <p class="academy-text">Разработано в HTML Academy</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
   </body>
 </html>

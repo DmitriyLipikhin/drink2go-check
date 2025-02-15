@@ -1,0 +1,34 @@
+div .noUi-target {
+  background-color: #e2e2e2;
+  border: none;
+}
+
+div .noUi-horizontal {
+  height: 4px;
+}
+
+div .noUi-handle {
+  border-radius: 50%;
+  border: 2px solid $hover-color;
+}
+
+div .noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px;
+  top: -9px;
+}
+
+div .noUi-connect {
+  background-color: $hover-color;
+}
+
+
+
+div .noUi-handle:before{
+  display: none;
+}
+
+div .noUi-handle:after {
+  display: none;
+}
+
