@@ -1,0 +1,28 @@
+.user-list__item {
+  list-style-type: none;
+  margin: 0;
+  width: 60px;
+  align-items: center;
+  text-align: center;
+}
+
+.user-list__link {
+  display: block;
+  background-color: #333333;
+  padding: 30px 22px;
+  mask-size: 16px 16px;
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+}
+.user-list__link-entry{
+  mask-image: url("../../icons/entry-icon.svg");
+}
+
+.user-list__link-union {
+  mask-image: url("../../icons/union-icon.svg");
+
+}
+
+.user-list__item:hover{
+  background-color: #f0ebff;
+}

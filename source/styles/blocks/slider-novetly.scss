@@ -1,0 +1,124 @@
+.slider-novetly {
+  position: relative;
+}
+
+.slider-novetly__wrapper {
+  padding: 20px 20px 60px;
+  background-color: #f3ebe1;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.slider-novetly__list {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-novetly__item {
+  list-style-type: none;
+}
+
+.slider-novetly__item-espresso, .slider-novetly__item-lavander {
+  display: none;
+}
+
+.slider-novetly_image {
+  margin-bottom: 10px;
+}
+
+.slider-novetly__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-novetly__label {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-color;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.slider-novetly__title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+
+.slider-novetly__text {
+  margin: 0;
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+.slider-novetly__buy{
+  display: flex;
+}
+
+.slider-novetly__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-color;
+  text-decoration: line-through;
+}
+
+.slider-novetly__new-price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-right: 25px;
+}
+
+.slider-novetly__button {
+  width: 113px;
+
+}
+
+.slider-novetly__arrows-button--right {
+  right: 0;
+  left: unset;
+}
+
+.slider-novetly__arrows-button {
+  padding: 0;
+  bottom: 0;
+  width: 20px;
+  margin: 0;
+  background-size: 100%;
+  background-position: 100%;
+  z-index: 1;
+  border: 0;
+  background-color: transparent;
+}
+
+.slider-novetly__arrows-button::after {
+  content: "";
+  mask-image: url("../../icons/slider-arrow.svg");
+  display: block;
+  width: 100%;
+  height: 20px;
+  mask-size: 20px 20px;
+  mask-position: center;
+  background-color: $base-color;
+  top: 0;
+}
+
+.slider-novetly__arrows-button, slider-novetly__arrows-button:after {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+.slider-novetly__arrows-button--right {
+  transform: rotate(180deg);
+}
+
+.slider-novetly__arrows-button--left {
+  left: 0;
+}
+
+.slider-novetly__pagination {
+  display: none;
+}

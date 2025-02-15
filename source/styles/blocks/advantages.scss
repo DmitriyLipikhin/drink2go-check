@@ -1,0 +1,70 @@
+.advantages__wrapper {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  padding: 50px 20px 60px;
+}
+
+.advantages__label {
+  margin-bottom: 4px;
+}
+
+.advantages__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 36px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 32px;
+}
+
+.advantages__item-card {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__item-title {
+  margin: 0;
+  font-size: 18;
+  line-height: 32px;
+}
+
+.advantages__item-text {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.advantages__item-icon {
+  content: "";
+  background-size: 52px 56px;
+  background-position: 50% 50%;
+  display: block;
+  width: 52px;
+  height: 56px;
+  margin-bottom: 10px;
+}
+
+.advantages__item-icon-speed {
+  background-image: url("../../icons/speed_icon.svg");
+}
+
+.advantages__item-icon-facilities {
+  background-image: url("../../icons/facilities_icon.svg");
+}
+
+.advantages__item-icon-vigor {
+  background-image: url("../../icons/speed_icon.svg");
+}
+
+.advantages__item-icon-enviromentally {
+  background-image: url("../../icons/environmentally_icon.svg");
+}
