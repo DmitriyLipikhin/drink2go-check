@@ -1,4 +1,51 @@
 .product-card {
   list-style-type: none;
   padding: 40px 20px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.product-card__image {
+  margin-bottom: 24px;
+}
+
+.product-card__title {
+  margin: 0 0 4px;
+  text-align: start;
+  width: 100%;
+}
+
+.product-card__text {
+  margin: 0 0 16px;
+}
+
+.product-card__buy {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-card__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+div .product-card__button {
+  font-size: 14px;
+  line-height: 20px;
+  width:  141px;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.product-card__button::before {
+  background-image: url("../../icons/trash-icon.svg");
+  content: "";
+  display: block;
+  width: 20px;
+  height: 16px;
+  margin-right: 2px;
 }

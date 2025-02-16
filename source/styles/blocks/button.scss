@@ -9,3 +9,28 @@
   line-height: 24px;
   font-family: "Montserrat", sans-serif;
 }
+
+.button:hover {
+  background-color: $hover-color;
+}
+
+.button:active {
+  background-color: $active-color;
+}
+
+.button:disabled {
+  background-color: #bdbdbd;
+}
+
+.button--light:hover {
+  color: #ffffff;
+}
+
+.button--light:active {
+  color: #ffffff;
+}
+
+.button--light:disabled {
+  color: #ffffff;
+  background-color: #e2e2e2;
+}

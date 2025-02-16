@@ -16,6 +16,8 @@
 
 .slider-novetly__item {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider-novetly__item-espresso, .slider-novetly__item-lavander {
@@ -104,6 +106,7 @@
   mask-position: center;
   background-color: $base-color;
   top: 0;
+  mask-repeat: no-repeat;
 }
 
 .slider-novetly__arrows-button, slider-novetly__arrows-button:after {
@@ -121,4 +124,37 @@
 
 .slider-novetly__pagination {
   display: none;
+}
+
+
+@media (min-width: 768px) {
+  .slider-novetly__wrapper {
+    padding: 60px 80px 0;
+    background: linear-gradient(#f3ebe1 640px, #ffffff 128px);
+  }
+
+  .slider-novetly__item picture {
+    order: 1;
+  }
+
+  .slider-novetly__title {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .slider-novetly__text {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: none;
+  }
+
+  .slider-novetly__buy {
+    margin-bottom: 20px;
+  }
+
+  .slider-novetly__arrows-button {
+    height: 77.5%;
+    width: 80px;
+  }
 }

@@ -22,13 +22,37 @@ div .noUi-connect {
   background-color: $hover-color;
 }
 
-
-
-div .noUi-handle:before{
+div .noUi-handle::before {
   display: none;
+}
+
+div .noUi-handle:hover::before{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(119.67, 88.92, 207.19, 0.25);
+  margin: 2px;
+  left: 0;
+  display: block;
+  top: 0;
+}
+
+div .noUi-handle:active::before{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $base-color;
+  margin: 2px;
+  left: 0;
+  display: block;
+  top: 0;
 }
 
 div .noUi-handle:after {
   display: none;
+}
+
+div [disabled] .noUi-handle {
+  border-color: #bdbdbd;
 }
 

@@ -1,10 +1,10 @@
 .navigation-list__item {
   list-style-type: none;
-  padding: 20px 0;
   text-align: center;
   background-color: #ffffff;
   border-top: 1px solid #f0ebff;
-  display: none;
+  min-height: 57px;
+  align-content: center;
 }
 
 .navigation-list__item:last-child {
@@ -13,6 +13,21 @@
 .navigation-list__link {
   text-decoration: none;
   color: $font-color;
+  padding: 20px;
   font-family: "Montserrat", sans-serif;
 }
 
+@media (min-width:768px) {
+  .navigation-list__item {
+    border: none;
+    min-height: 80px;
+  }
+
+  .navigation-list__item:last-child {
+    border: none;
+  }
+
+  .navigation-list__link {
+    padding: 32px 20px;
+  }
+}

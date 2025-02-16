@@ -5,8 +5,9 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/button.scss";
 @import "./blocks/header.scss";
-@import "./blocks/academy-text.scss";
+@import "./blocks/academy.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/catalog.scss";
 @import "./blocks/contacts.scss";
@@ -22,6 +23,6 @@
 @import "./blocks/user-list.scss";
 @import "./blocks/navigation-list.scss";
 @import "./blocks/page.scss";
-@import "./blocks/button.scss";
 @import "./blocks/label.scss";
 @import "./blocks/slider.scss";
+@import "./blocks/main-footer.scss";

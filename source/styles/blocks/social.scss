@@ -1,0 +1,60 @@
+.social {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.social-item {
+  list-style-type: none;
+  display: flex;
+  border-radius: 4px;
+}
+
+.social-item:active {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.social-item:hover {
+  background-color: #f0ebff;
+}
+
+.social-item__link-vk{
+  mask-image: url("../../icons/VK.svg");
+  background-color: #bdbdbd;
+}
+
+.social-item__link-pinterest{
+  mask-image: url("../../icons/pinterest.svg");
+  background-color: #bdbdbd;
+}
+
+.social-item__link-classmates{
+  mask-image: url("../../icons/classmates.svg");
+  background-color: #bdbdbd;
+}
+
+.social-item__link {
+  display: block;
+  content: "";
+  mask-size: 20px 20px;
+  width: 40px;
+  height: 40px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.social-item__link:hover {
+  background-color: $base-color;
+}
+
+.social-item__link:active {
+  background-color: $base-color;
+}

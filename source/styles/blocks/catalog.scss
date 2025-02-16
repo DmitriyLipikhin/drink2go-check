@@ -1,4 +1,7 @@
 /*Catalog__filter*/
+.catalog {
+  background-color: #f8f8f8;
+}
 
 .catalog__filter-wrapper{
   width: 320px;
@@ -39,6 +42,28 @@
   height: 40px;
   border-radius: 4px;
   border: 2px solid $hover-color;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  outline: none;
+}
+
+.catalog__filter-price-input:focus {
+  border-color: $active-color;
+}
+
+.catalog__filter-price-input:disabled {
+  border-color: #e2e2e2;
+  color: #e2e2e2;
+}
+
+.catalog__filter-price-input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #bdbdbd;
+  text-align: center;
 }
 
 .catalog__filter-price-input-max {
@@ -108,11 +133,28 @@
   width: 16px;
   border-radius: 50%;
   margin: 2px;
+  transition: ease 0.4s;
   height: 16px;
 }
 
 .catalog__filter-input[type="radio"]:checked + .catalog__filter-mark::after {
   background-color: $base-color;
+}
+
+.catalog__filter-input[type="radio"]:hover + .catalog__filter-mark::after{
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.catalog__filter-input[type="radio"]:hover + .catalog__filter-mark{
+  border-color: $hover-color;
+}
+
+.catalog__filter-input[type="radio"]:disabled + .catalog__filter-mark::after{
+  background-color: #e2e2e2;
+}
+
+.catalog__filter-input[type="radio"]:disabled + .catalog__filter-mark{
+  border-color: #e2e2e2;
 }
 
 .catalog__filter-mark-country {
@@ -131,14 +173,53 @@
   transition: ease 0.4s;
 }
 
+.catalog__filter-input[type="checkbox"]:disabled + .catalog__filter-mark-country::after {
+  background-color: #f8f8f8;
+}
+
+.catalog__filter-input[type="checkbox"]:disabled + .catalog__filter-mark-country {
+  background-color: #e2e2e2;
+}
+
+.catalog__filter-input[type="checkbox"]:disabled:checked + .catalog__filter-mark-country::after {
+  background-color: #bdbdbd;
+}
+
+.catalog__filter-input[type="checkbox"]:disabled:checked + .catalog__filter-mark-country {
+  background-color: #e2e2e2;
+}
+
 .catalog__filter-input[type="checkbox"]:checked + .catalog__filter-mark-country::after {
   background-color: #ffffff;
   transform: translate(18px);
   transition: ease 0.4s;
 }
 
+
 .catalog__filter-input[type="checkbox"]:checked + .catalog__filter-mark-country{
+  background-color: $hover-color;
+}
+
+.catalog__filter-input[type="checkbox"]:hover + .catalog__filter-mark{
   background-color: $base-color;
+}
+
+.catalog__filter-input[type="checkbox"]:hover + .catalog__filter-mark::after {
+  top: -2px;
+  left: -2px;
+}
+
+.catalog__filter-input[type="checkbox"]:hover + .catalog__filter-mark {
+  border: 2px solid $hover-color;
+  background-color: rgba(119.67, 88.92, 207.19, 0.25);
+}
+
+.catalog__filter-input:disabled + .catalog__filter-mark{
+  border-color: #e2e2e2;
+}
+
+.catalog__filter-input:disabled + .catalog__filter-mark + .catalog__filter-label{
+  color: #e2e2e2;
 }
 
 .catalog__filter-submit-wrapper {
@@ -162,7 +243,11 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
 .catalog__container {
   width: 320px;
   margin: 0 auto;
-  padding: 22px 20px 0;
+  padding: 22px 20px 44px;
+}
+
+.catalog__sorting-wrapper {
+  margin-bottom: 20px;
 }
 
 .catalog__sorting-label {
@@ -189,6 +274,7 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
   appearance: none;
   outline: none;
   padding: 4px 30px 4px 10px;
+  background-color: #f8f8f8;
 }
 
 .catalog__sorting-option-arrow::after {
@@ -212,6 +298,52 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
 .catalog__product-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-bottom: 40px;
 }
 
+.catalog__pagination {
+  display: flex;
+  column-gap: 20px;
+}
+.catalog__pagination-button {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: $base-color;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.catalog__pagination-button--currently {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  color: #333333;
+}
+
+.catalog__pagination-button-arrow::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: $base-color;
+}
+
+.catalog__pagination-button-arrow-left::before {
+  mask-image: url("../../icons/arrow-select-icon.svg");
+  background-color: $base-color;
+  transform: rotate(90deg);
+}
+
+.catalog__pagination-button-arrow:hover::before {
+  background-color: #fff;
+}
+
+.catalog__pagination-button-arrow-right::before {
+  mask-image: url("../../icons/arrow-select-icon.svg");
+  transform: rotate(270deg);
+}
