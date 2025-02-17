@@ -101,3 +101,24 @@
     margin: 0;
   }
 }
+
+@media (min-width: 1440px) {
+  .advantages__wrapper {
+    width: 1400px;
+    padding: 100px 40px 120px;
+  }
+
+  .advantages__list {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .advantages__item-card {
+    flex-direction: column;
+    min-height: 170px;
+  }
+
+  .advantages__description-wrapper {
+    width: 299px;
+    text-align: center;
+  }
+}

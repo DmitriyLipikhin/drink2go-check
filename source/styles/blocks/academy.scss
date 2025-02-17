@@ -1,7 +1,7 @@
 .academy {
   width: 320px;
   margin: 0 auto;
-  padding: 20px 57px 30px;
+  padding: 20px 48px 30px;
 }
 
 .academy__link {
@@ -37,4 +37,7 @@
 
 .academy__link:active::after {
   background-color: $active-color;
+}
+
+@media (min-width: 768px) {
 }

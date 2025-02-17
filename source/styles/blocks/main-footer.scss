@@ -1,3 +1,8 @@
+.main-footer__container {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .main-footer__social-wrapper {
   width: 320px;
   margin: 0 auto;
@@ -50,4 +55,27 @@
 
 .main-footer__contacts {
   padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .main-footer__container {
+    width: 768px;
+  }
+
+  .main-footer__social-wrapper {
+    width: 768px;
+  }
+
+  .main-footer__widgets-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-footer__navigation {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: auto;
+    column-gap: 100px;
+  }
 }

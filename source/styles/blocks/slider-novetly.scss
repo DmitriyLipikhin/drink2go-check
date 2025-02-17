@@ -50,6 +50,11 @@
   margin-bottom: 10px;
 }
 
+.slider-novetly__break::after {
+  content: "\A";
+  white-space: pre;
+}
+
 .slider-novetly__text {
   margin: 0;
   margin-bottom: 20px;
@@ -65,6 +70,7 @@
   line-height: 32px;
   color: $base-color;
   text-decoration: line-through;
+  margin-right: 6px;
 }
 
 .slider-novetly__new-price {
@@ -147,6 +153,7 @@
     font-size: 20px;
     line-height: 32px;
     max-width: none;
+    width: 649px;
   }
 
   .slider-novetly__buy {
@@ -156,5 +163,56 @@
   .slider-novetly__arrows-button {
     height: 77.5%;
     width: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .slider-novetly__wrapper {
+    padding: 30px 80px 60px 105px;
+    background: #f3ebe1;
+  }
+
+  .slider-novetly__item {
+    flex-direction: row;
+  }
+
+  .slider-novetly__item picture{
+    order: 0;
+  }
+
+  .slider-novetly__description-wrapper {
+    margin-top: 150px;
+    align-items: start;
+    text-align: start;
+  }
+
+  .slider-novetly__arrows-button {
+    height: 100%;
+  }
+
+  .slider-novetly__pagination {
+    display: block;
+  }
+
+  .slider-novetly__pagination-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    column-gap: 8px;
+  }
+
+  .slider-novetly__pagination-item {
+    list-style-type: none;
+  }
+
+  .slider-novetly__pagination-button {
+    width: 64px;
+    height: 4px;
+    border: none;
+  }
+
+  .slider-novetly__pagination-button--active {
+    background-color: $base-color;
   }
 }

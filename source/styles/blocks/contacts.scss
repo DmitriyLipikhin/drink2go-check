@@ -6,6 +6,7 @@
 
 .contacts__title {
   color: $base-color;
+  margin: 0;
 }
 
 .contacts__list {
@@ -52,4 +53,11 @@
 .contacts__item-link {
   color: $font-color;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    width: 240px;
+    margin: 0;
+  }
 }

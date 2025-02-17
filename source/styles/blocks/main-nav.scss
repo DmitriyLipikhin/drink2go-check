@@ -12,6 +12,10 @@
   padding-top: 12px;
 }
 
+.main-nav__logo-text {
+  display: none;
+}
+
 .main-nav__user-wrapper{
   margin-left: 88px;
   width: 120px;
@@ -88,5 +92,31 @@
 
   .main-nav__togle-wrapper {
     display: none;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .main-nav {
+    width: 1440px;
+    padding: 0 40px
+  }
+  .main-nav__logo-wrapper {
+    column-gap: 20px;
+    display: flex;
+    padding: 0;
+  }
+
+  .main-nav__logo-link {
+    align-self: center;
+  }
+
+  .main-nav__logo-text {
+    display: inline;
+    width: 230px;
+  }
+
+  .main-nav__user-wrapper {
+    width: auto;
   }
 }

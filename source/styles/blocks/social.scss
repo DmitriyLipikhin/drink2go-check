@@ -4,7 +4,7 @@
   justify-content: space-between;
 }
 
-.social-list{
+.social__list{
   display: flex;
   margin: 0;
   padding: 0;
@@ -12,36 +12,36 @@
   align-items: center;
 }
 
-.social-item {
+.social__item {
   list-style-type: none;
   display: flex;
   border-radius: 4px;
 }
 
-.social-item:active {
+.social__item:active {
   background-color: rgba(120, 89, 207, 0.25);
 }
 
-.social-item:hover {
+.social__item:hover {
   background-color: #f0ebff;
 }
 
-.social-item__link-vk{
+.social__item-link-vk{
   mask-image: url("../../icons/VK.svg");
   background-color: #bdbdbd;
 }
 
-.social-item__link-pinterest{
+.social__item-link-pinterest{
   mask-image: url("../../icons/pinterest.svg");
   background-color: #bdbdbd;
 }
 
-.social-item__link-classmates{
+.social__item-link-classmates{
   mask-image: url("../../icons/classmates.svg");
   background-color: #bdbdbd;
 }
 
-.social-item__link {
+.social__item-link {
   display: block;
   content: "";
   mask-size: 20px 20px;
@@ -51,10 +51,17 @@
   mask-position: center;
 }
 
-.social-item__link:hover {
+.social__item-link:hover {
   background-color: $base-color;
 }
 
-.social-item__link:active {
+.social__item-link:active {
   background-color: $base-color;
+}
+
+
+@media (min-width:768px) {
+  .social_list {
+    flex-direction: row;
+  }
 }

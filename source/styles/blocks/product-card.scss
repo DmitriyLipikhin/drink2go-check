@@ -49,3 +49,14 @@ div .product-card__button {
   height: 16px;
   margin-right: 2px;
 }
+
+@media (min-width: 768px) {
+  .product-card {
+    width: 349px;
+  }
+
+  .product-card__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
