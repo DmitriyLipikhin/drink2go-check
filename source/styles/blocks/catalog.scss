@@ -1,12 +1,12 @@
-/*Catalog__filter*/
 .catalog {
   background-color: #f8f8f8;
+  padding-top: 45px;
 }
 
-.catalog__filter-wrapper{
+.catalog__filter-wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 50px 20px 22px;
+  padding: 0 20px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@
 
 .catalog__filter-price-slider {
   margin: 0 auto 30px;
-  width: 253px;
+  width: 262px;
 }
 
 .catalog__filter-price-wrapper {
@@ -75,7 +75,7 @@
   display: block;
   width: 8px;
   height: 2px;
-  background-color: #666;
+  background-color: #666666;
   order: 1;
   align-self: center;
 }
@@ -100,7 +100,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .catalog__filter-mark {
@@ -114,12 +114,6 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-}
-
-.catalog__filter-label {
-  font-size: 16px;
-  line-height: 24px;
-  margin-left: 10px;
 }
 
 .catalog__filter-input[type="radio"]:checked + .catalog__filter-mark {
@@ -141,19 +135,19 @@
   background-color: $base-color;
 }
 
-.catalog__filter-input[type="radio"]:hover + .catalog__filter-mark::after{
+.catalog__filter-input[type="radio"]:hover + .catalog__filter-mark::after {
   background-color: rgba(120, 89, 207, 0.25);
 }
 
-.catalog__filter-input[type="radio"]:hover + .catalog__filter-mark{
+.catalog__filter-input[type="radio"]:hover + .catalog__filter-mark {
   border-color: $hover-color;
 }
 
-.catalog__filter-input[type="radio"]:disabled + .catalog__filter-mark::after{
+.catalog__filter-input[type="radio"]:disabled + .catalog__filter-mark::after {
   background-color: #e2e2e2;
 }
 
-.catalog__filter-input[type="radio"]:disabled + .catalog__filter-mark{
+.catalog__filter-input[type="radio"]:disabled + .catalog__filter-mark {
   border-color: #e2e2e2;
 }
 
@@ -195,13 +189,8 @@
   transition: ease 0.4s;
 }
 
-
-.catalog__filter-input[type="checkbox"]:checked + .catalog__filter-mark-country{
+.catalog__filter-input[type="checkbox"]:checked + .catalog__filter-mark-country {
   background-color: $hover-color;
-}
-
-.catalog__filter-input[type="checkbox"]:hover + .catalog__filter-mark{
-  background-color: $base-color;
 }
 
 .catalog__filter-input[type="checkbox"]:hover + .catalog__filter-mark::after {
@@ -211,14 +200,14 @@
 
 .catalog__filter-input[type="checkbox"]:hover + .catalog__filter-mark {
   border: 2px solid $hover-color;
-  background-color: rgba(119.67, 88.92, 207.19, 0.25);
+  background-color: $base-color;
 }
 
-.catalog__filter-input:disabled + .catalog__filter-mark{
+.catalog__filter-input:disabled + .catalog__filter-mark {
   border-color: #e2e2e2;
 }
 
-.catalog__filter-input:disabled + .catalog__filter-mark + .catalog__filter-label{
+.catalog__filter-input:disabled + .catalog__filter-mark + .catalog__filter-label {
   color: #e2e2e2;
 }
 
@@ -233,14 +222,30 @@ div .catalog__filter-button-reset {
   background-color: #ffffff;
 }
 
-div .catalog__filter-button-submit, .catalog__filter-button-reset {
+div .catalog__filter-button-submit,
+.catalog__filter-button-reset {
   width: 100%;
   min-height: 40px;
 }
 
-/*Catalog*/
+.catalog__title {
+  font-size: 26px;
+  line-height: 36px;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-.catalog__container {
+.catalog__label {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 1px;
+  text-align: center;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.catalog__wrapper {
   width: 320px;
   margin: 0 auto;
   padding: 22px 20px 44px;
@@ -270,7 +275,6 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
   font-size: 16px;
   line-height: 24px;
   color: $base-color;
-  -webkit-appearance: none;
   appearance: none;
   outline: none;
   padding: 4px 30px 4px 10px;
@@ -284,14 +288,11 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
   width: 10px;
   height: 6px;
   position: absolute;
-  background-size: 10px 6px;
   transform: translateY(-50%);
   top: 50%;
   right: 10px;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 10px;
-  height: 6px;
   pointer-events: none;
 }
 
@@ -308,6 +309,7 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
   display: flex;
   column-gap: 20px;
 }
+
 .catalog__pagination-button {
   width: 40px;
   height: 40px;
@@ -340,7 +342,7 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
 }
 
 .catalog__pagination-button-arrow:hover::before {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .catalog__pagination-button-arrow-right::before {
@@ -352,14 +354,13 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
   display: none;
 }
 
-
 @media (min-width: 768px) {
   .catalog__filter-wrapper {
     width: 768px;
     padding-top: 80px;
   }
 
-  .catalog__filter-title {
+  .catalog__title {
     font-size: 42px;
     line-height: 64px;
   }
@@ -388,14 +389,13 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
     padding: 0 20px;
   }
 
-  .catalog__container {
+  .catalog__wrapper {
     width: 768px;
     padding-bottom: 90px;
   }
 
   .catalog__product-list {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 30px;
   }
 
@@ -415,7 +415,71 @@ div .catalog__filter-button-submit, .catalog__filter-button-reset {
     background: none;
   }
 
-  .catalog__pagination-button-text{
+  .catalog__pagination-button-text {
     display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalog {
+    display: flex;
+    padding: 0;
+  }
+
+  .catalog__block {
+    padding: 100px 40px 120px;
+    margin: 0 auto;
+  }
+
+  .catalog__container {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  .catalog__wrapper {
+    margin: 0;
+    padding: 0;
+    width: 1011px;
+  }
+
+  .catalog__sorting-label {
+    justify-content: end;
+  }
+
+  .catalog__product-list {
+    margin-bottom: 60px;
+  }
+
+  .catalog__filter-wrapper {
+    width: 318px;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+  }
+
+  .catalog__filter-form {
+    grid: none;
+    width: 318px;
+  }
+
+  .catalog__filter-group-availabilty {
+    grid-row: 2/3;
+  }
+
+  .catalog__filter-group-country {
+    grid-row: 3/4;
+  }
+
+  .catalog__filter-price-input {
+    width: 134px;
+  }
+
+  .catalog__filter-submit-wrapper {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  div .catalog__filter-button {
+    width: 149px;
   }
 }

@@ -8,25 +8,37 @@
 
 .user-list__icon {
   display: block;
-  padding: 30px 22px;
+  padding: 22px 22px 18px;
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.user-list__icon-entry{
-  background-image: url("../../icons/entry-icon.svg");
+
+.user-list__icon-entry svg {
+  fill: $font-color;
 }
 
-.user-list__icon-union {
-  background-image: url("../../icons/union-icon.svg");
+.user-list__icon-union svg {
+  fill: $font-color;
+}
 
+.user-list__link:active .user-list__icon-entry svg {
+  fill: $base-color;
+}
+
+.user-list__link:active .user-list__icon-union svg {
+  fill: $base-color;
 }
 
 .user-list__text {
   display: none;
 }
 
-.user-list__item:hover{
+.user-list__link:active .user-list__text {
+  color: $base-color;
+}
+
+.user-list__item:active {
   background-color: #f0ebff;
 }
 
@@ -39,17 +51,17 @@
   .user-list__link {
     text-decoration: none;
     color: $font-color;
-    padding: 32px 18px;
+    padding: 30px 18px;
     display: flex;
     column-gap: 8px;
     align-items: center;
   }
 
-.user-list__icon {
-  padding: 0;
-  width: 16px;
-  height: 16px;
-}
+  .user-list__icon {
+    padding: 0;
+    width: 16px;
+    height: 16px;
+  }
 
   .user-list__text {
     display: block;

@@ -20,12 +20,13 @@
   flex-direction: column;
 }
 
-.slider-novetly__item-espresso, .slider-novetly__item-lavander {
+.slider-novetly__item-espresso,
+.slider-novetly__item-lavander {
   display: none;
 }
 
-.slider-novetly_image {
-  margin-bottom: 10px;
+.slider-novetly__image {
+  margin-bottom: 4px;
 }
 
 .slider-novetly__description-wrapper {
@@ -45,24 +46,27 @@
 
 .slider-novetly__title {
   margin: 0;
-  font-size: 36px;
+  font-size: 37px;
   line-height: 48px;
   margin-bottom: 10px;
+  font-family: "Montserrat Bold", "Arial", sans-serif;
 }
 
 .slider-novetly__break::after {
-  content: "\A";
-  white-space: pre;
+  display: none;
 }
 
 .slider-novetly__text {
   margin: 0;
-  margin-bottom: 20px;
-  max-width: 320px;
+  margin-bottom: 19px;
+  width: 280px;
+  font-size: 14px;
 }
 
-.slider-novetly__buy{
+.slider-novetly__buy {
   display: flex;
+  width: 230px;
+  justify-content: space-between;
 }
 
 .slider-novetly__old-price {
@@ -70,24 +74,27 @@
   line-height: 32px;
   color: $base-color;
   text-decoration: line-through;
-  margin-right: 6px;
+  align-self: center;
 }
 
 .slider-novetly__new-price {
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
-  margin-right: 25px;
+  margin-right: 10px;
+  margin-top: 4px;
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  margin-right: 8px;
 }
 
 .slider-novetly__button {
   width: 113px;
-
 }
 
 .slider-novetly__arrows-button--right {
   right: 0;
   left: unset;
+  transform: rotate(180deg);
 }
 
 .slider-novetly__arrows-button {
@@ -115,13 +122,11 @@
   mask-repeat: no-repeat;
 }
 
-.slider-novetly__arrows-button, slider-novetly__arrows-button:after {
+.slider-novetly__arrows-button,
+.slider-novetly__arrows-button::after {
   position: absolute;
   height: 100%;
   top: 0;
-}
-.slider-novetly__arrows-button--right {
-  transform: rotate(180deg);
 }
 
 .slider-novetly__arrows-button--left {
@@ -141,6 +146,11 @@
 
   .slider-novetly__item picture {
     order: 1;
+  }
+
+  .slider-novetly__break::after {
+    content: "\A";
+    white-space: pre;
   }
 
   .slider-novetly__title {
@@ -176,7 +186,7 @@
     flex-direction: row;
   }
 
-  .slider-novetly__item picture{
+  .slider-novetly__item picture {
     order: 0;
   }
 

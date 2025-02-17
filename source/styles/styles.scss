@@ -1,21 +1,17 @@
 /* GLOBAL */
-@import "./common/mixins.scss";
 @import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "../vendor/slider.scss";
 @import "./blocks/button.scss";
-@import "./blocks/header.scss";
 @import "./blocks/academy.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/catalog.scss";
 @import "./blocks/contacts.scss";
-@import "./blocks/filter.scss";
 @import "./blocks/map.scss";
 @import "./blocks/main-nav.scss";
-@import "./blocks/media.scss";
-@import "./blocks/online-store.scss";
 @import "./blocks/product-card.scss";
 @import "./blocks/slider-novetly.scss";
 @import "./blocks/social.scss";
@@ -24,5 +20,4 @@
 @import "./blocks/navigation-list.scss";
 @import "./blocks/page.scss";
 @import "./blocks/label.scss";
-@import "./blocks/slider.scss";
 @import "./blocks/main-footer.scss";

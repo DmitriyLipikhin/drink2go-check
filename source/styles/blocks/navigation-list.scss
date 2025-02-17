@@ -10,6 +10,7 @@
 .navigation-list__item:last-child {
   border-bottom: 1px solid #f0ebff;
 }
+
 .navigation-list__link {
   text-decoration: none;
   color: $font-color;
@@ -17,7 +18,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .navigation-list__item {
     border: none;
     min-height: 80px;
@@ -25,6 +26,15 @@
 
   .navigation-list__item:last-child {
     border: none;
+  }
+
+  .navigation-list__item:active {
+    background-color: #f0ebff;
+    color: $base-color;
+  }
+
+  .navigation-list__link:active {
+    color: $base-color;
   }
 
   .navigation-list__link {

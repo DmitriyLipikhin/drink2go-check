@@ -1,8 +1,9 @@
 /* в этот файл добавляет скрипты*/
-console.log(1)
 const sliderCatalog = document.querySelector('.catalog__filter-price-slider');
 const minPriceInput = document.getElementById('min-price');
 const maxPriceInput = document.getElementById('max-price')
+
+noUiSlider.cssClasses.target += ' range-slider';
 
 noUiSlider.create(sliderCatalog, {
   range: {
@@ -12,6 +13,7 @@ noUiSlider.create(sliderCatalog, {
   start: [0,900],
   step: 50,
   connect: true,
+  cssPrefix: 'noui-', // defaults to 'noUi-',
 }) ;
 
 sliderCatalog.noUiSlider.on('update', (values) => {
